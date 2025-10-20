@@ -5,7 +5,7 @@ Each topic has its own directory with all necessary files. Package dependencies 
 
 ## Born-von-Karman 
 Simulation of periodic boundary conditions in linear and polar coordinates. Run with
-```python
+```shell
 python born_von_karman.py
 ```
 
