@@ -1,3 +1,9 @@
+# ignore output files
+*.pdf 
+*.png
+*.txt  
+*.npy
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
