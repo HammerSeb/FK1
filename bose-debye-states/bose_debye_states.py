@@ -78,8 +78,8 @@ with PdfPages("bose_debye_states.pdf") as pdf:
     ax[1].set_xlabel("angular frequency [1/s]")
     ax[1].legend()
 
-f.tight_layout()
+    f.tight_layout()
 
-pdf.savefig(f)
+    pdf.savefig(f)
 
 plt.show()
