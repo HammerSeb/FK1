@@ -10,3 +10,25 @@ python born_von_karman.py
 ```
 
 Needs `numpy` and `matplotlib`
+
+
+## Bose-Debye States 
+Debye density of states multiplied with Bose distribution
+
+```shell
+python bose_debye_states.py
+```
+
+Needs `numpy` and `matplotlib`
+
+
+## Linear-chain 
+Interactive simulation of diatomic linear chain with same atom mass but two different spring constants. 
+
+```shell
+python bose_debye_states.py
+```
+
+Needs `numpy` and `mpyqtgraph`
+
+DISCLAIMER: This code was created using ChatGPT 5.1 and was only slightly adapted for better visibility 
