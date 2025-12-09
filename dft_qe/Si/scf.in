@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'scf',                  ! calculation type
+  restart_mode = 'from_scratch',        
+  prefix = 'silicon',                   ! file prefix   
+  outdir = './tmp/'                     ! output directory 
+  pseudo_dir = '../pseudos/'            ! where to look for pseudo_potentials relative from this input file
+  verbosity = 'high'
+/
+
+&SYSTEM
+  ibrav =  2,                           ! defines the bravais lattice 2: fcc
+  celldm(1) = 10.2076,                  ! unit cell dimensions, in this case the celldm(1) is the length of the cube edge of the fcc lattice
+  nat =  2,                             ! number of atoms in the primtive unit cell
+  ntyp = 1,                             ! types of atoms in the unit cell
+  ecutwfc = 50,                         ! kinetic energy cutoff of the wave functions
+  ecutrho = 400,                        ! energy cutoff for the pseudopotential     
+  nbnd = 16,                             ! number of bands to calculate
+  occupations = 'smearing',
+  degauss = 2D-3
+/
+
+&ELECTRONS
+  conv_thr = 1e-8,                      ! convergence threshold for selfconsistency ()
+  mixing_beta = 0.6                     ! mixing ratio of old wave function to new wave function in scf steps
+/
+
+ATOMIC_SPECIES
+  Si 28.086 Si.UPF                      ! atoms and the names of the pseudopotentials that should be used (needs to be in pseudu_dir path)
+
+ATOMIC_POSITIONS (alat)                 ! List the atomic positions in the unit cell below. alat means in relative units of the primitive lattice vectors 
+  Si 0.0 0.0 0.0
+  Si 0.25 0.25 0.25
+
+K_POINTS (automatic)                    ! List of k-points that are to be calculated in each k direction kx ky kz [x-y-z offsets], automatic gives uniform Monkhorst k-grid (hear 8x8x8=512 kpoints)
+  12 12 12 0 0 0
