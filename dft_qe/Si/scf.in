@@ -9,7 +9,7 @@
 
 &SYSTEM
   ibrav =  2,                           ! defines the bravais lattice 2: fcc
-  celldm(1) = 10.2076,                  ! unit cell dimensions, in this case the celldm(1) is the length of the cube edge of the fcc lattice
+  celldm(1) = 10.2076,                  ! unit cell dimensions, in this case the celldm(1) is the length of the cube edge of the fcc lattice - units of Bohr Radius
   nat =  2,                             ! number of atoms in the primtive unit cell
   ntyp = 1,                             ! types of atoms in the unit cell
   ecutwfc = 50,                         ! kinetic energy cutoff of the wave functions
@@ -21,7 +21,7 @@
 
 &ELECTRONS
   conv_thr = 1e-8,                      ! convergence threshold for selfconsistency ()
-  mixing_beta = 0.6                     ! mixing ratio of old wave function to new wave function in scf steps
+  mixing_beta = 0.6                     ! mixing ratio of old density to new density in scf steps
 /
 
 ATOMIC_SPECIES
